@@ -160,7 +160,7 @@ public class YamlDocumentValidator implements YamlValidator
         {
             List<ValidationResult> onRuleEnd = rule.onRuleEnd();
             addMessages(onRuleEnd);
-        }
+    }
         else
         {
             throw new IllegalStateException("Unexpected ruleContext state");

@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.raml</groupId>
     <artifactId>raml-parser</artifactId>
-    <version>0.8.12</version>
+    <version>0.8.12-ns-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Raml parser</name>
     <description>Java implementation of the raml parser</description>
@@ -289,15 +289,26 @@
 
     <distributionManagement>
         <repository>
-            <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <url>https://repository-master.mulesoft.org/releases/</url>
+            <id>nexus-releases</id>
+            <url>http://devops.lashou-inc.com:8081/content/repositories/thirdparty</url>
         </repository>
         <snapshotRepository>
-            <id>mulesoft-snapshots</id>
-            <name>MuleSoft Snapshots Repository</name>
-            <url>https://repository-master.mulesoft.org/snapshots/</url>
+            <id>nexus-snapshots</id>
+            <url>http://devops.lashou-inc.com:8081/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>mulesoft-releases</id>-->
+            <!--<name>MuleSoft Releases Repository</name>-->
+            <!--<url>https://repository-master.mulesoft.org/releases/</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>mulesoft-snapshots</id>-->
+            <!--<name>MuleSoft Snapshots Repository</name>-->
+            <!--<url>https://repository-master.mulesoft.org/snapshots/</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 
 </project>

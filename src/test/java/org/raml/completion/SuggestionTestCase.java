@@ -290,7 +290,7 @@ public class SuggestionTestCase
         YamlDocumentSuggester yamlDocumentSuggester = new YamlDocumentSuggester(new RamlDocumentBuilder());
         List<Suggestion> suggest = yamlDocumentSuggester.suggest(HEADER, "  ");
         assertThat(suggest, notNullValue());
-        assertThat(suggest.size(), is(ACTION_SUGGEST_COUNT - 1));
+        assertThat(suggest.size(), is(ACTION_SUGGEST_COUNT - 0));
         assertThat(suggest.contains(new KeySuggestion("headers")), is(false));
         assertThat(suggest.contains(new KeySuggestion("queryParameters")), is(true));
         assertThat(suggest.get(0).getIndentation(), is(2));

@@ -21,9 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.raml.model.parameter.Header;
-import org.raml.model.parameter.QueryParameter;
-import org.raml.model.parameter.UriParameter;
+import org.raml.model.parameter.*;
 import org.raml.parser.annotation.Key;
 import org.raml.parser.annotation.Mapping;
 import org.raml.parser.annotation.Parent;
@@ -43,6 +41,9 @@ public class Action implements Serializable
 
     @Scalar
     private String description;
+
+    @Scalar
+    private String template;
 
     @Mapping
     private Map<String, Header> headers = new LinkedHashMap<String, Header>();
@@ -73,6 +74,14 @@ public class Action implements Serializable
 
     public Action()
     {
+    }
+
+    public String getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(String template) {
+        this.template = template;
     }
 
     public ActionType getType()
